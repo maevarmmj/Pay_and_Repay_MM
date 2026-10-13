@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pay and Repay</title>
+    <link rel="stylesheet" href="css/main-body.css" />
+    <link rel="stylesheet" href="css/expenses-table.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+        <h1>Pay and Repay</h1>
+        <p>APPLICATION FROM MAELO STUDIO</p>
+    </header>
+
+    <main>
+
+        <section id = "summary">
+            <h2><span id = "balance-summary-text">Balance</span></h2>
+        </section>
+        
+        <section id = "add-debt">
+            <h2>Ajouter une dépense</h2>
+            <form id = "expenses-form">
+                <select id = "payeur" name = "payeur" required>
+                    <option value = "Elle">Elle</option>
+                    <option value = "Lui">Lui</option>
+                </select>
+                <label for = "beneficiaire">a payé pour</label>
+                <select id = "beneficiaire" name = "beneficiaire" required>
+                    <option value = "Elle">Elle</option>
+                    <option value = "Lui">Lui</option>
+                    <option value = "Nous">Nous</option>
+                </select>
+                <label for = "montant">pour un montant de</label>
+                <input type = "text" id = "montant" inputmode = "decimal" name = "montant" required />
+                <label for = "date">€, le </label>
+                <input type = "date" id = "date" name = "date" required />
+                <label for = "description">. <br> C'était pour </label>
+                <input type = "text" id = "description" name = "description" placeholder="Description de la dépense" /><br>
+                
+                
+                <button type = "submit" id = 'submit-button'>Ajouter</button>
+
+            </form>
+        </section>
+
+        <section id = "history">
+            <h2>Historique des dépenses</h2>
+            <table id = "expenses-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Payé par</th>
+                        <th>Pour</th>
+                        <th>Montant</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody id = "expenses-table-body">
+                    <!-- Les dépenses seront ajoutées ici dynamiquement -->
+                </tbody>
+            </table>
+        </section>
+
+        <section id = "buttons">
+            <button type = "button" id = "delete-one-button" class = "hidden">Supprimer une dépense</button>
+            <button type = "button" id = "delete-all-button">Supprimer tout</button>
+        </section>
+
+
+    </main>
+
+    <footer id = "footer"></footer>
+    <script src = "renderer.js"></script>
+
+  </body>
+

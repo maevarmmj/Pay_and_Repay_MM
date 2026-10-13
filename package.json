@@ -1,0 +1,29 @@
+{
+  "name": "pay_and_repay_mm",
+  "version": "1.0.0",
+  "description": "This app manages the expenses within a couple!",
+  "main": "main/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maevarmmj/Pay_and_Repay_MM.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/maevarmmj/Pay_and_Repay_MM/issues"
+  },
+  "homepage": "https://github.com/maevarmmj/Pay_and_Repay_MM#readme",
+  "devDependencies": {
+    "@electron/rebuild": "^4.2.0",
+    "electron": "^44.4.5"
+  },
+  "dependencies": {
+    "better-sqlite3": "^13.0.3"
+  }
+}
