@@ -1,0 +1,19 @@
+.hidden {
+    display: none;
+}
+
+
+
+#expenses-table-body tr {
+    cursor: pointer;
+}
+
+
+#expenses-table-body tr:hover {
+    background-color: #99e463;
+}
+
+/* Style for the class 'selected row' */
+#expenses-table-body tr.selected-row {
+    background-color: #486193;
+}

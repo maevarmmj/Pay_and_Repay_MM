@@ -1,0 +1,36 @@
+:root {
+  --bg: #cf868c;
+  --panel: #c6464d;
+  --panel-light: #2e2555;
+  --border: #f2ecff;
+  --text: #ffe7e7;
+  --text-dim: #8f86b8;
+
+  --elle: #ff5d8f;
+  --lui: #4fd6e0;
+  --accent: #ffd23f;
+  --danger: #ff5d5d;
+  --danger-dark: #b83f3f;
+}
+
+body {
+    text-align: center;
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: monospace;
+    font-size: 15px;
+    padding: 20px;
+}
+
+h1, h2, button {
+  font-family: monospace;
+}
+
+section {
+  background: var(--panel);
+  border: 3px solid var(--border);
+  box-shadow: 5px 5px 0 #7b2424;
+  padding: 10px;
+  margin-bottom: 10px;
+}
