@@ -2,7 +2,24 @@
     display: none;
 }
 
+#expenses-table {
+    width: 100%;
+    table-layout: fixed;
+}
 
+#expenses-table-body {
+    display: block;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+
+#expenses-table thead tr,
+#expenses-table-body tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
 
 #expenses-table-body tr {
     cursor: pointer;

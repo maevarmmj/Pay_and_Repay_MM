@@ -1,9 +1,9 @@
 :root {
-  --bg: #cf868c;
-  --panel: #c6464d;
+  --bg: linear-gradient(rgb(46, 198, 211), rgb(192, 242, 253));
+  --panel: #0b7d77;
   --panel-light: #2e2555;
   --border: #f2ecff;
-  --text: #ffe7e7;
+  --text: #dcf9ff;
   --text-dim: #8f86b8;
 
   --elle: #ff5d8f;
@@ -14,13 +14,15 @@
 }
 
 body {
+
     text-align: center;
     margin: 0;
-    background: var(--bg);
     color: var(--text);
     font-family: monospace;
     font-size: 15px;
     padding: 20px;
+    background-image: url("/assets/bg_test.png");
+    background-size: cover;
 }
 
 h1, h2, button {

@@ -1,5 +1,5 @@
 # Aseprite files
-.aseprite
+*.aseprite
 
 # Compiled class file
 *.class
