@@ -5,14 +5,15 @@
 #expenses-table {
     width: 100%;
     table-layout: fixed;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(237, 255, 220) rgba(255, 252, 252, 0);
 }
 
 #expenses-table-body {
     display: block;
-    max-height: 200px;
+    max-height: 100px;
     overflow-y: auto;
 }
-
 
 #expenses-table thead tr,
 #expenses-table-body tr {
@@ -25,12 +26,13 @@
     cursor: pointer;
 }
 
-
 #expenses-table-body tr:hover {
-    background-color: #99e463;
+    background-color: #b6df70;
+    border-radius: 10px;
 }
 
 /* Style for the class 'selected row' */
 #expenses-table-body tr.selected-row {
-    background-color: #486193;
+    background-color: #39ade8;
+    border-radius: 10px;
 }

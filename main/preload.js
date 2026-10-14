@@ -3,7 +3,6 @@ const { contextBridge, ipcRenderer } = require('electron');
 // Create a secure bridge between the renderer process and the main process
 // Expose a limited API to the renderer process
 contextBridge.exposeInMainWorld('api', {
-    getAppVersion:() => ipcRenderer.invoke('app:get-version'),
     getDepenses: () => ipcRenderer.invoke('depenses:get-all'),
     addDepense: (depense) => ipcRenderer.invoke('depenses:add', depense),
     deleteDepense: (id) => ipcRenderer.invoke('depenses:delete', id),

@@ -1,0 +1,23 @@
+#submit-button {
+    margin-top: 10px;
+}
+
+select, input {
+    border-radius: 5px;
+    border: 1px solid var(--border);
+    background-color: var(--panel);
+    color: var(--text);
+    font-family:'VT323', monospace;
+    font-size: 17px;
+}
+
+input::placeholder {
+  font-weight: italic;
+  opacity: 0.5;
+  color: rgb(82, 104, 106);
+  text-align: center;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0.5;
+}

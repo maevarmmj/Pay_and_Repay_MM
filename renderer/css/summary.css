@@ -1,0 +1,19 @@
+:root {
+  --panel-summary: rgba(188, 203, 102, 0.6);
+  --text-summary: #f9ffec;
+
+  --elle: #ff5d8f;
+  --lui: #4fd6e0;
+  --accent: #ffd23f;
+  --danger: #ff5d5d;
+  --danger-dark: #b83f3f;
+}
+
+#summary{
+  color: var(--text-summary);
+  background: var(--panel-summary);
+}
+
+#balance-summary-text {
+  text-shadow: 1px 1px 0 rgb(57, 105, 30);
+}

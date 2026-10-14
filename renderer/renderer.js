@@ -7,16 +7,6 @@ const deleteOneButton = document.getElementById('delete-one-button');
 const submitButton = document.getElementById('submit-button')
 
 
-// Display the app version in the footer
-async function displayAppVersion() {
-    try {
-        const version = await window.api.getAppVersion();
-        const footerElement = document.getElementById('footer');
-        footerElement.textContent = `Electron Version: ${version}`;
-    } catch (error) {
-        console.error('Error fetching app version:', error);
-    }
-}   
 
 
 // Function to compute the balance between "Elle" and "Lui"
@@ -77,7 +67,7 @@ function renderSummary(){
     const balance = computeBalance(transactions);
     summary_text = document.getElementById('balance-summary-text');
     if (balance > 0) {
-        summary_text.textContent = `Lui doit ${formatMoney(balance)} à Elle`;
+        summary_text.textContent = `Il doit ${formatMoney(balance)} à Elle`;
     } else if (balance < 0) {
         summary_text.textContent = `Elle doit ${formatMoney(-balance)} à Lui`;
     } else {
@@ -286,7 +276,6 @@ window.addEventListener('DOMContentLoaded', () => {
 deleteAllButton.addEventListener('click', deleteAllExpenses);
 
 async function initializeApp() {
-    displayAppVersion();
     // Initial rendering of the summary and expenses table
     await loadExpensesFromDatabase(); // Load expenses from the database on initial load (await: ensures that the expenses are loaded before proceeding)
     await resetDatabaseEachMonth(); // Reset the database at the beginning of each month (await: ensures that the reset is completed before proceeding)

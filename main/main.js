@@ -20,9 +20,6 @@ function createWindow() {
     mainWindow.loadFile(path.join(__dirname, '..', 'renderer', 'index.html'));
 }
 
-ipcMain.handle('app:get-version', () => {
-    return app.getVersion();
-});
 
 ipcMain.handle('depenses:get-all', () => {
     return db.getAllTransactions();
