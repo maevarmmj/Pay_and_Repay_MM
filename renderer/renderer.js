@@ -1,6 +1,7 @@
 let transactions = [];
 let selectedTransactionId = null; // Variable to store the selected transaction ID
 
+const summaryField = document.getElementById('summary');
 const form = document.getElementById('expenses-form');
 const deleteAllButton = document.getElementById('delete-all-button');
 const deleteOneButton = document.getElementById('delete-one-button');
@@ -73,14 +74,22 @@ function evaluateAmount(expression){
 // Function to render the Summary part
 function renderSummary(){
     const balance = computeBalance(transactions);
+    let summaryClass;
+
     summary_text = document.getElementById('balance-summary-text');
     if (balance > 0) {
         summary_text.textContent = `Il doit ${formatMoney(balance)} à Elle`;
+        summaryClass = "lui-owes";
     } else if (balance < 0) {
         summary_text.textContent = `Elle doit ${formatMoney(-balance)} à Lui`;
+        summaryClass = "elle-owes";
     } else {
         summary_text.textContent = 'Les soldes sont équilibrés !';
+        summaryClass = "balanced";
     }
+
+    summaryField.classList.remove("balanced", "elle-owes", "lui-owes");
+    summaryField.classList.add(summaryClass);
 }
 
 

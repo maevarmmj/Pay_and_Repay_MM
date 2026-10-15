@@ -11,6 +11,7 @@ function createWindow() {
         fullscreenable: false,
         icon: path.join(__dirname, '../assets/logo/logo_short_test.png'),
         frame: false, // Remove the default window frame
+        alwaysOnTop: true, // Keep the window always on top
     
         webPreferences: {
         preload: path.join(__dirname, 'preload.js'), // Specify the path to the preload script

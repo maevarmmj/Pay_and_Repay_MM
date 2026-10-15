@@ -1,19 +1,31 @@
 :root {
   --panel-summary: rgba(188, 203, 102, 0.6);
   --text-summary: #f9ffec;
+  --text-summary-elle: #fff7f8;
+  --text-summary-lui: #f8ffff;
 
-  --elle: #ff5d8f;
-  --lui: #4fd6e0;
+  --elle: rgba(248, 139, 140, 0.6);
+  --lui: rgba(73, 209, 187, 0.6);
   --accent: #ffd23f;
   --danger: #ff5d5d;
   --danger-dark: #b83f3f;
 }
 
-#summary{
+#summary.balanced {
   color: var(--text-summary);
   background: var(--panel-summary);
 }
 
+#summary.elle-owes {
+  color: var(--text-summary-elle);
+  background: var(--elle);
+}
+
+#summary.lui-owes {
+  color: var(--text-summary-lui);
+  background: var(--lui);
+}
+
 #balance-summary-text {
-  text-shadow: 1px 1px 0 rgb(57, 105, 30);
+  text-shadow: 1px 1px 0 rgb(116, 116, 116);
 }
