@@ -4,6 +4,8 @@
   --panel-light: #2e2555;
   --border: #ecffff;
   --text: #dcf9ff;
+  --close-button: #fb7373;
+  --minimize-button: #febc49;
 }
 
 body {
@@ -16,6 +18,40 @@ body {
     padding: 20px;
     background-image: url("../../assets/bg_test.png");
     background-size: cover;
+}
+
+header {
+  -webkit-app-region: drag;
+}
+
+#close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  margin: 0;
+  font-size: 25px;
+  cursor: pointer;
+  color: var(--close-button);
+  -webkit-app-region: no-drag; /* Make the close button clickable */
+}
+
+#minimize {
+  position: absolute;
+  top: 8px;
+  right: 30px;
+  margin: 0;
+  font-size: 25px;
+  cursor: pointer;
+  color: var(--minimize-button);
+  -webkit-app-region: no-drag;
+}
+
+#close:hover {
+  color: #e0153a; /* Change color on hover */
+}
+
+#minimize:hover {
+  color: #ef9910;
 }
 
 .logo {
@@ -33,9 +69,10 @@ button {
   font-family: 'VT323', monospace;
 }
 
-p {
+footer {
   margin: 0;
   padding: 0;
+  -webkit-app-region: drag;
 }
 
 section {

@@ -9,5 +9,6 @@ contextBridge.exposeInMainWorld('api', {
     deleteAllDepenses: () => ipcRenderer.invoke('depenses:delete-all'),
     getSetting: (key) => ipcRenderer.invoke('settings:get', key),
     setSetting: (key, value) => ipcRenderer.invoke('settings:set', key, value),
+    close: () => ipcRenderer.send('window:close'), // Expose a method to close the window
+    minimize: () => ipcRenderer.send('window:minimize')
 });
-

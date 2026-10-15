@@ -5,8 +5,16 @@ const form = document.getElementById('expenses-form');
 const deleteAllButton = document.getElementById('delete-all-button');
 const deleteOneButton = document.getElementById('delete-one-button');
 const submitButton = document.getElementById('submit-button')
+const closeButton = document.getElementById('close');
+const minimizeButton = document.getElementById('minimize');
 
+closeButton.addEventListener('click', () => {
+    window.api.close(); // Call the close method exposed in the preload script
+});
 
+minimizeButton.addEventListener('click', () => {
+    window.api.minimize();
+});
 
 
 // Function to compute the balance between "Elle" and "Lui"
